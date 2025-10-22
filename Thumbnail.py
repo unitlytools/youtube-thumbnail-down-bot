@@ -95,6 +95,19 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     os.remove(tmp_path)
 
+from flask import Flask
+import os
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return 'Bot is Running ✅'
+
+@app.route('/health')
+def health():
+    return 'I am alive 💚'
+
 # ✅ Run Flask in background thread
 def run_flask():
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
