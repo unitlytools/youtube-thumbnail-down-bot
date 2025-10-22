@@ -16,7 +16,7 @@ from telegram.ext import (
 )
 
 # ✅ Your Bot Token
-TOKEN = "8300053434:AAFOFKKtCAC-W16MPdaPhcqdjHKnH1Q6YI4"
+TOKEN = "BOT TOKEN"
 
 # ✅ Flask app
 app = Flask(__name__)
